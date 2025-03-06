@@ -1,0 +1,101 @@
+                                         /* Not The Final Style, Change it to the themes' style */
+
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl; /* Right-to-left layout for Arabic */
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004080;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.search-box input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffaa00;
+}
+
+/* Section Styling */
+.section {
+    background: #fff;
+    padding: 15px;
+    margin: 15px auto;
+    width: 90%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Image Containers */
+.events-container, .Activities-container, .Colleg-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.event img, .Activities img, .Colleg img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.event img:hover, .Activities img:hover, .Colleg img:hover {
+    transform: scale(1.05);
+}
+
+/* Notification Section */
+.Notificaion-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Notificaion-slide img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Navigation Arrows */
+.arrow {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.arrow:hover {
+    color: #ffcc00;
+}

@@ -3,36 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taibah Univents</title>
+    <title>Taibah Univents - Settings</title>
     <link rel="icon" href="./Images/taibah_logo.png" type="image/*">
     <link rel="stylesheet" href="Settings.css">
+    <link rel="stylesheet" href="../Profile/profile.css">
+   
 </head>
 <body>
 
-                <!--Files are gonna be linked partially for each section-->
+   
 
-                    
-    <div class="Picture-settings">
-        <div class="Profile-Picture-Container">
-            <img id="profilePicture" src="./Images/Default-pfp.png" alt="Profile Picture">
-            <input type="file" id="profileInput" accept="image/png, image/jpeg, image/webp">
+    <div class="settings-container">
+        <button class="back-button" onclick="goBack()">&#8592; Back</button>
+
+        <div class="settings-list">
+            <div class="settings-item" onclick="window.location.href ='../Profile/profile.html'">Profile Settings</div>
+            <div class="settings-item" onclick="window.location.href ='../Information/info.html'">Personal Information</div>
+            <div class="settings-item" onclick="window.location.href ='../Privacy/privacy.html'">Privacy & Security</div>
+            <div class="settings-item" onclick="window.location.href='../Theme/theme.html'">Appearance</div>
+            <div class="settings-item" onclick="window.location.href ='../History/history.html'">Past Events</div>
+            <div class="settings-item" onclick="window.location.href ='../Help-Support/support.html'">Help & Support</div>
+
+            <div class="settings-item logout" onclick="logoutUser()">Logout</div>
         </div>
-        <button id="deletePfp" class="delete-btn">Delete</button> <!-- Delete Button -->
     </div>
 
-    <div class="settings">
-        <div class="personal-information"></div><!-- Academic info + communication prefrences-->
-        <div class="history"></div>
-        <div class="privacy"></div>
-        <div class="language"></div>
-        <div class="help-and-support"></div>
-        <div class="LogOut"></div>
-        <div class="DarkMode"></div>
-        
-    </div>
-        
-
-
-    <script src="Settings.js"></script> <!-- Script at bottom -->
+    <script src="Settings.js"></script>
 </body>
 </html>

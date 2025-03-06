@@ -1,59 +1,12 @@
-* {
-    justify-content: center;
-    align-items: center;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-body {
-    background-color: rgb(99, 98, 98); /* change this later*/
-}
-
-.Picture-settings {
+    background: #f4f4f4;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the top */
     align-items: center;
-    position: absolute;
-    top: 20px; /* Position the settings at the top-left corner with some margin */
-    left: 20px; /* Position at the left side with some margin */
-    width: 200px; /* Set a fixed width for the square */
-    height: 200px; /* Set a fixed height for the square */
-    border: solid 2px #ccc; /* Add a border around the square */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.Profile-Picture-Container {
-    position: relative;
-    width: 100px; /* Set width of profile picture container */
-    height: 100px; /* Set height of profile picture container */
-    border-radius: 50%; /* Make it a circle */
-    overflow: hidden;
-    cursor: pointer;
-    border: 2px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px; /* Add space below the profile picture container */
-}
-
-.Profile-Picture-Container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-#profileInput {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 10;
+    height: 100vh;
 }
 
 .delete-btn {
@@ -64,9 +17,65 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
-    width: 40%; /* Make the delete button width same as the container */
+    width: 40%; 
 }
 
 .delete-btn:hover {
     background-color: #d32f2f;
 }
+
+.settings-container {
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.back-button {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.settings-item {
+    background: white;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.settings-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logout {
+    margin-top: 7%;
+    background: #ff4d4d;
+    color: white;
+}
+
+.logout:hover {
+    background: #cc0000;
+}
+
+
+
+
