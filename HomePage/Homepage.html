@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-                                <!-- Needs update on header list placement
-=======
-<!-- Needs update on header list placement
->>>>>>> f72218972cb9f7f330f1a9d84e9024f8bfe5b875
-                                         + adding footer with required info
-                                         + tag "Copyright"
-                                         + adding the bot section
-                                         + language of the page can be 
-                                           depending on the system lang(default)
-                                         + Remove search bar
-                                         + Adding full pages for each section
-                                            in the home page
-                                         + Style it to make the top
-                                            is the announcements
-                                            under it reveals the other 
-                                            sections, with imgaes
-                                            covering the screen and 
-                                         filling the events vibe.
-                                         + add section to visit the 
-                                            university's main websi
--->
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -30,18 +9,15 @@
     <script src="Homepage.js" defer></script><!-- ملف js -->
 </head>
 <body>
+<!------------------------------------------------------------------------------------------------------------------------------->
+
     <!-- class تصميم للجزء العلوي -->
     <div class="navbar">
     
         <!-- اللوقو حق الصفحه -->
         <a href="Homepage.html">
-            <img src="../Settings/Images/taibah_logo.png" class="logo">
+            <img src="../Settings/Images/taibah_logo.png" class="logo" alt="شعار طيبة">
         </a>
-
-        <!-- مربع البحث -->
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="ابحث هنا ... ">
-        </div>
 
         <!-- مكان ربط صفحه عن الصفحه الرايسيه و الزر -->
         <a href="الربط هنا" target="_blank">
@@ -49,7 +25,7 @@
         </a>
 
         <!--زر تحويل الغه-->
-        <button onclick="toggleLanguage()">En/Ar</button>
+        <button onclick="toggleLanguage()">En/عربي</button>
 
         <!--مكان ربط صفحه تسجيل الدخول و الزر-->
         <a href="الربط هنا" target="_blank">
@@ -60,131 +36,118 @@
         <a href="الربط هنا" target="_blank">
             <button id="profile-btn" onclick="window.location.href = '../Settings/main_settings/Settings.html'">profile</button>
         </a>
-
     </div>
-   
+
+<!------------------------------------------------------------------------------------------------------------------------------->
     <!-- class عشان تصميم شكل (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
     <div class="section"> 
-
         <!-- الاشعارات و الاعلانات-->
         <span>Notificaion - Announcement</span>
     </div>
+<!------------------------------------------------------------------------------------------------------------------------------->
 
     <!-- class + صور الاشعارات -->
     <div class="Notificaion-container">
-        <div class="Notificaion">
-            <div class="Notificaion-slide">
-                        <!-- الصوره الاوله -->
-                <img src="../Settings/Images/notification.png">
-            </div>
-            <div class="carousel-slide">
-                        <!-- الصوره الثانيه -->
-                <img src="../Settings/Images/notification.png">
-            </div>
-            <div class="carousel-slide">
-                        <!--الصوره الثالثه-->
-                <img src="../Settings/Images/notification.png">
+         <!-- R arrow-->
+        <button class="arrow" onclick="prevSlide()"> < </button>
+
+        <div  class="Notificaion">
+            <div id="Notificaion" class="Notificaion-slide">
+                <!-- الشعارات -->
+                <img src="../Settings/Images/notification.png" alt="إشعار 1">
             </div>
         </div>
 
-        <!-- الاسهم حقت تنقل الصور في الاشعارات -->
-        <button class="Notificaion-container prev" onclick="prevSlide()">
-            <span class="arrow">&#8249;</span>
-        </button>
-        <button class="Notificaion-container next" onclick="nextSlide()">
-            <span class="arrow">&#8250;</span>
-        </button>
+       <!-- L arrow-->
+        <button class="arrow" onclick="nextSlide()"> > </button>
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------->
     
     <!-- class عشان تصميم المستطيل الي في (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
     <div class="container">
 
         <!-- class عشان تصميم شكل (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
         <div class="section">
-
             <!-- قسم الاحداث -->
             <span>Events Section</span>
-
             <!--زر عرض الجميع-->
             <button class="show-all" onclick="showAll('events')">Show All</button>
         </div>
 
+<!------------------------------------------------------------------------------------------------------------------------------->
+
         <!-- class + صور قسم الاحداث-->
         <div class="events-container">
             <div class="event">
-                        <!-- الصوره الاوله -->
-                <img src="../Settings/Images/activity background.jpg">
+                <!-- الصوره الاوله -->
+                <img src="../Settings/Images/activity background.jpg" alt="حدث 1">
             </div>
             <div class="event">
-                        <!-- الصوره الثانيه -->
-                <img src="../Settings/Images/activity background.jpg">
+                <!-- الصوره الثانيه -->
+                <img src="../Settings/Images/activity background.jpg" alt="حدث 2">
             </div>
             <div class="event">
-                        <!--الصوره الثالثه-->
-                <img src="../Settings/Images/activity background.jpg">
+                <!--الصوره الثالثه-->
+                <img src="../Settings/Images/activity background.jpg" alt="حدث 3">
             </div>
         </div>
+<!------------------------------------------------------------------------------------------------------------------------------->
 
         <!-- class عشان تصميم شكل (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
         <div class="section">
-
             <!-- الفعاليات-->
             <span>Activities</span>
-
             <!--زر عرض الجميع-->
             <button class="show-all" onclick="showAll('activities')">Show All</button>
         </div>
-        
+<!------------------------------------------------------------------------------------------------------------------------------->
+
         <!--class + صور الفعاليات-->
         <div class="Activities-container">
-
             <div class="Activities">
-                        <!-- الصوره الاوله -->
-                <img src="../Settings/Images/activity background.jpg">
+                <!-- الصوره الاوله -->
+                <img src="../Settings/Images/activity background.jpg" alt="فعالية 1">
             </div>
             <div class="Activities">
-                        <!-- الصوره الثانيه -->
-                <img src="../Settings/Images/activity background.jpg">
+                <!-- الصوره الثانيه -->
+                <img src="../Settings/Images/activity background.jpg" alt="فعالية 2">
             </div>
             <div class="Activities">
-                        <!--الصوره الثالثه-->
-                <img src="../Settings/Images/activity background.jpg">
+                <!--الصوره الثالثه-->
+                <img src="../Settings/Images/activity background.jpg" alt="فعالية 3">
             </div>
         </div>
+<!------------------------------------------------------------------------------------------------------------------------------->
 
         <!-- class عشان تصميم شكل (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
         <div class="section">
-
             <!-- احداث الكليه -->
             <span>Colleges Categories Event Section</span>
-
             <!--زر عرض الجميع-->
             <button class="show-all" onclick="showAll('Colleg')">Show All</button>
         </div>
 
         <!-- class + صور احداث الكليه-->
         <div class="Colleg-container">
-
             <div class="Colleg">
-                        <!-- الصوره الاوله -->
-                <img src="../Settings/Images/activity background.jpg">
+                <!-- الصوره الاوله -->
+                <img src="../Settings/Images/activity background.jpg" alt="كلية 1">
             </div>
             <div class="Colleg"> 
-                        <!-- الصوره الثانيه -->
-                <img src="../Settings/Images/activity background.jpg">
+                <!-- الصوره الثانيه -->
+                <img src="../Settings/Images/activity background.jpg" alt="كلية 2">
             </div>
             <div class="Colleg">
-                         <!--الصوره الثالثه-->
-                <img src="../Settings/Images/activity background.jpg">
+                <!--الصوره الثالثه-->
+                <img src="../Settings/Images/activity background.jpg" alt="كلية 3">
             </div>
         </div>
 
+    </div>
+<!------------------------------------------------------------------------------------------------------------------------------->
 
-        <footer>
-            <p> &copy; FS WebDev Univents </p>
-        </footer>
-
+    <footer>
+        <p> &copy; FS WebDev Univents </p>
+    </footer>
 </body>
 </html>
-<!-- Nothing .. -->
- <!--abcde-->
-<!-- Nothing 2-->
