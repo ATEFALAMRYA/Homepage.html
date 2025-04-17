@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
   
   // العناصر المشتركة
@@ -9,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const errorHeading = document.querySelector(".error-prompt-heading");
   const errorList = document.querySelector(".error-prompt-list");
 
-
-  
   // إعدادات النماذج
   const formsConfig = {
     login: {
@@ -45,37 +41,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let timeoutId;
 
-
-
   // دوال مساعدة
   function showNotification(heading, errors) {
     const progressBar = document.getElementById("progressBar");
-    // إعادة تعيين الشريط
     progressBar.style.transition = 'none';
     progressBar.style.width = '0%';
 
-
     void progressBar.offsetWidth;
-
-
-
 
     // تحديث المحتوى
     errorHeading.textContent = heading;
     errorList.innerHTML = errors.map(msg => `<li>${msg}</li>`).join('');
-    
-
 
     // عرض التنبيه
     errorNotification.classList.remove("hidden");
-    
 
     // بدء التحريك بعد تأخير بسيط
     setTimeout(() => {
       progressBar.style.transition = 'width 15s linear';
       progressBar.style.width = '100%';
     }, 50);
-
 
     // إدارة المهلة
     if (timeoutId) clearTimeout(timeoutId);
@@ -98,55 +83,46 @@ document.addEventListener("DOMContentLoaded", function () {
     field.classList.remove("invalid");
   }
 
-
-
-
   // أحداث نموذج تسجيل الدخول
-formsConfig.login.form.addEventListener("submit", function(e) {
-  e.preventDefault();
-  const form = e.target; // الحصول على النموذج من الحدث
-  
-  let errors = [];
-  if (!form.username.value.trim()) {
-    errors.push("يرجى إدخال اسم المستخدم");
-    markInvalid(form.username);
-  }
-  if (!form.password.value.trim()) {
-    errors.push("يرجى إدخال كلمة المرور");
-    markInvalid(form.password);
-  }
+  formsConfig.login.form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
 
-  if (errors.length > 0) {
-    showNotification("الحقول المطلوبة فارغة!", errors);
-  } else {
-    form.submit(); 
-  }
-});
+    let errors = [];
+    if (!form.username.value.trim()) {
+      errors.push("يرجى إدخال اسم المستخدم");
+      markInvalid(form.username);
+    }
+    if (!form.password.value.trim()) {
+      errors.push("يرجى إدخال كلمة المرور");
+      markInvalid(form.password);
+    }
 
+    if (errors.length > 0) {
+      showNotification("الحقول المطلوبة فارغة!", errors);
+    } else {
+      form.submit(); 
+    }
+  });
 
-  
   // أحداث نموذج إنشاء الحساب
   formsConfig.signup.form.addEventListener("submit", function(e) {
     e.preventDefault();
     const password = formsConfig.signup.fields.password.value;
     let errors = [];
-    
-
 
     // التحقق من كلمة المرور
     if (password.length < 8) {
       errors.push(formsConfig.signup.messages.errors[0]);
     }
-    
+
     if (!/[!@#$%^&*<>=+""'':;/,.{}]/.test(password)) {
       errors.push(formsConfig.signup.messages.errors[1]);
     }
-    
+
     if (!/\d/.test(password)) {
       errors.push(formsConfig.signup.messages.errors[2]);
     }
-    
-
 
     // إدارة الأنماط
     if (errors.length > 0) {
@@ -155,16 +131,11 @@ formsConfig.login.form.addEventListener("submit", function(e) {
     } else {
       resetFieldStyles(formsConfig.signup.fields.password);
       formsConfig.signup.form.submit();
-
     }
   });
 
-
-
   // أحداث مشتركة
   closeNotification.addEventListener("click", hideNotification);
-
-
 
   // إعادة تعيين الحقول عند التركيز
   document.querySelectorAll("input").forEach(input => {
@@ -172,12 +143,25 @@ formsConfig.login.form.addEventListener("submit", function(e) {
       resetFieldStyles(input);
     });
   });
+
+  // Modal open and close handling
+  const modalElements = {
+    overlay: document.getElementById('modalOverlay'),
+    modal: document.getElementById('loginModal'),
+    closeBtn: document.getElementById('closeModalBtn')
+  };
+
+  // Open the modal when the page loads
+  modalElements.overlay.style.display = 'block';
+  modalElements.modal.style.display = 'block';
+  switchForm('login');
+
+  function closeModal() {
+    modalElements.overlay.style.display = 'none';
+    modalElements.modal.style.display = 'none';
+    window.close(); // Close the page when modal is closed
+  }
+
+  modalElements.closeBtn.addEventListener('click', closeModal);
+  modalElements.overlay.addEventListener('click', closeModal);
 });
-
-
-
-
-
-
-
-
