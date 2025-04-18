@@ -8,7 +8,7 @@
 :root {
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --primary-color: #004080;
-    --secondary-color: #ffaa00;
+    --secondary-color: #1a8a5b;
     --background-color: #f5f5f5;
     --text-color: #333;
     --white: #ffffff;
@@ -131,7 +131,7 @@ button {
 }
 
 button:hover {
-    background-color: #e69a00;
+    background-color: #245f4b;
 }
 
 .show-all {
