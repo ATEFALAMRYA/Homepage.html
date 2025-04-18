@@ -53,11 +53,11 @@ if(!empty($username) && !empty($password)) {
         <h4>سيتم إرسال رمز مكون من 4 أرقام إلى رقم الجوال للتأكيد</h4>
         
         <input type="text" id="username" name="username" placeholder="اسم المستتخدم" required>
-        <input type="text" id="nnnnnuuuuulll" name="first name" placeholder="الاسم الاول" required>
-        <input type="text" id="nnuuuuuuuulll" name="last name" placeholder="الاسم الاخير" required>
+        <input type="text" id="nnnnnuuuuulll" name="firstName" placeholder="الاسم الاول" required>
+        <input type="text" id="nnuuuuuuuulll" name="lastName" placeholder="الاسم الاخير" required>
         <input type="text" name="StdId" placeholder="رقمك الجامعي" required>
-        <input type="email" name="email" placeholder="البريد الالكتروني" required>
-        <input type="text" name="phonenumber"  placeholder="📞 أدخل رقم الجوال" required>
+        <input type="email" name="Email" placeholder="البريد الالكتروني" required>
+        <input type="text" name="PhoneNumber"  placeholder="📞 أدخل رقم الجوال" required>
         <input type="password" name = "Password" id="signupPassword" placeholder="🔒 أدخل كلمة المرور الجديدة">
 
         <button class="btn-login" type="submit">إنشاء حساب</button>
