@@ -14,7 +14,7 @@
 
   <div class="modal-overlay" style="display: block;"></div>
   <div class="modal-content" style="display: block;">
-    <button class="butto" onclick="window.location.href='login.html'"><span class="X">&times;</span></button>
+    <button class="butto" onclick="window.location.href='./login.php'"><span class="X">&times;</span></button>
 
     <div class="container active">
       <form class="login-form">
